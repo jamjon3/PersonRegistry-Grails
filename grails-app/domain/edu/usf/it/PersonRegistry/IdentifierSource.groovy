@@ -4,7 +4,8 @@ class IdentifierSource {
     Date dateCreated
     Date lastUpdated 
     static belongsTo = [
-      identifier: Identifier
+      identifier: Identifier,
+      source: Source
     ]
     static mapping = {
       autoTimestamp true

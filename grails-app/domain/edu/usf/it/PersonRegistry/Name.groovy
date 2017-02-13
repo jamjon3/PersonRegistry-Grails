@@ -10,7 +10,8 @@ class Name {
     String suffix = ""
         
     static belongsTo = [
-      person: Person
+      person: Person,
+      source: Source
     ]
     static hasOne = [ 
       person: Person,

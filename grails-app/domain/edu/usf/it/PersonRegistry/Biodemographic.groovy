@@ -7,6 +7,7 @@ class Biodemographic {
     Date deathDate
     static belongsTo = [
       person: Person,
+      source: Source,
       gender: Gender
     ]
     static hasOne = [ 
