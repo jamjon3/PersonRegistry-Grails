@@ -30,12 +30,12 @@ class BootStrap {
     }
     System.out.println("The allowed key length for AES is: " + allowedKeyLength);
     // Testing if the Genealogy table needs initializing with default data genealogy
-//    if(!Genealogy.count()) {
-//      def genealogyResult = genealogyService.importGenealogy(JSON.parse(new File('src/main/groovy/edu/usf/it/PersonRegistry/Default', 'GenealogyData.json').text))
-//      System.out.println("Existing Genealogic Existing Entries: " + genealogyResult.existing)   
-//      System.out.println("Existing Genealogic Added Entries: " + genealogyResult.added)   
-//      System.out.println("Existing Genealogic Errored Entries: " + genealogyResult.errored)   
-//    }
+    if(!Genealogy.count()) {
+      def genealogyResult = genealogyService.importGenealogy(JSON.parse(new File('src/main/groovy/edu/usf/it/PersonRegistry/Default', 'GenealogyData.json').text))
+      System.out.println("Existing Genealogic Existing Entries: " + genealogyResult.existing)   
+      System.out.println("Existing Genealogic Added Entries: " + genealogyResult.added)   
+      System.out.println("Existing Genealogic Errored Entries: " + genealogyResult.errored)   
+    }
     if(!Person.count()) {
       personService.importPerson(JSON.parse(new File('src/main/groovy/edu/usf/it/PersonRegistry/Default', 'PersonData.json').text))
     }
