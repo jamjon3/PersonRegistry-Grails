@@ -17,7 +17,7 @@ class GenealogyService {
         System.out.println("Running Genealogy Import")
         genealogy.genealogy.each { g ->
           if(g.relationship in Genealogy.constrainedProperties ['relationship']['inList']) {
-            def gexists = Genealogy.findByRelationshipByNicknameByRealname(g.relationship,g.nickname.g.realname)
+            def gexists = Genealogy.findByRelationshipAndNicknameAndRealname(g.relationship,g.nickname,g.realname)
             // def gexists = Genealogy.find(g as Genealogy)
             if(!!!gexists) {
               gexists = g as Genealogy
