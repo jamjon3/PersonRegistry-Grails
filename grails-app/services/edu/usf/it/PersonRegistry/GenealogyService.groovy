@@ -18,7 +18,6 @@ class GenealogyService {
         genealogy.genealogy.each { g ->
           if(g.relationship in Genealogy.constrainedProperties ['relationship']['inList']) {
             def gexists = Genealogy.findByRelationshipAndNicknameAndRealname(g.relationship,g.nickname,g.realname)
-            // def gexists = Genealogy.find(g as Genealogy)
             if(!!!gexists) {
               gexists = g as Genealogy
               if(!gexists.save(failOnError:false, flush: true, insert: true, validate: true)) {
