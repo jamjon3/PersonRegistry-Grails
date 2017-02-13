@@ -1,0 +1,6 @@
+{
+  "sources": [
+    { "code": "USFGEMS", "description": "USF Campus HR System" },
+    { "code": "USFBANNER", "description": "USF Campus Student System System" }
+  ]
+}

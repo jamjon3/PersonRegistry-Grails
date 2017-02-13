@@ -1,0 +1,16 @@
+{
+  "genders": [
+    {
+      "code": "M",
+      "description": "Male"
+    },
+    {
+      "code": "F",
+      "description": "Female"
+    },
+    {
+      "code": "O",
+      "description": "Other"
+    }
+  ]
+}
